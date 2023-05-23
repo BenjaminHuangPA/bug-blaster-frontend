@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bug-blaster-frontend-service
+spec:
+  selector:
+    app: bug-blaster-frontend
+  ports:
+    - port: 3000
+      name: frontend-port
+      targetPort: 3000
+    #- port: 3050
+    #  name: frontend-api-server-port
+    #  targetPort: 3050
+  type: LoadBalancer
